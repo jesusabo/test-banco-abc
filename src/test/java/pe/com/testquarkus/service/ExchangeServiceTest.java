@@ -72,7 +72,7 @@ class ExchangeServiceTest {
         ResourceException ex = assertThrows(ResourceException.class,
                 () -> service.getExchange(dni));
 
-        assertEquals("Supero limite de consultas", ex.getMessage());
+        assertEquals("Supero el limite de consultas por dia", ex.getMessage());
         verifyNoInteractions(exchangeProxy);
     }
 }
